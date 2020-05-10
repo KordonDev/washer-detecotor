@@ -1,4 +1,5 @@
-const clapDetector = require('clap-detector'); 
+const clapDetector = require('clap-detector');
+const todoist = require('./todoist');
 
 const clapConfig = {
 	AUDIO_SOURCE: 'alsa hw:1,0',
@@ -12,4 +13,6 @@ clapDetector.start(clapConfig);
 clapDetector.onClap((history) => {
 	console.log('clap detected with');
 	console.dir(history);
+	todoist()
+		.then(console.log);
 });

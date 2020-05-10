@@ -8,7 +8,8 @@ const newTask = {
     due_lang: 'de',
 };
 
-export const createNewTask = () => {
+const createNewTask = () => {
+    console.log('called');
     return fetch('https://api.todoist.com/rest/v1/tasks', {
         method: 'post',
         headers: {
@@ -19,3 +20,5 @@ export const createNewTask = () => {
     })
     .then(res => res.json())
 }
+
+module.exports = createNewTask;
