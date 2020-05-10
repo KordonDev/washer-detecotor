@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "clap-detector": "github:KordonDev/clap-detector"
+    "clap-detector": "github:KordonDev/clap-detector",
+    "node-fetch": "^2.6.0"
   }
 }
